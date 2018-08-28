@@ -221,11 +221,6 @@ Elements in a circuit are either Passive or Active
 	\newline
 	\includegraphics[scale=0.75]{currentlaw}
 
-	
-
-
-
-
 	\item Kirchoff Voltage Law: Within any closed loop of a circuit, the sum of all the voltages in any closed loop is always zero with the following rule:
 	\begin{itemize}
 	\item Voltage encounters $+$ $\rightarrow$ $(+) $
@@ -245,6 +240,8 @@ Elements in a circuit are either Passive or Active
 	\newline
 	V = $V_1 + V_2 + V_3$
 
+	\subsection{KVL Example}
+	
 	\subsection{Example 1}
 	\begin{circuitikz} \draw
 	(0,0) to[american voltage source, l=36 <\volt>, invert] (0,4)
@@ -259,6 +256,27 @@ Elements in a circuit are either Passive or Active
 	%	   to[voltmeter, l=3<\kilo\volt>, color=blue] (3.5,-2) -- (3.5,0)
  	;
  	\end{circuitikz}
+
+ 	\subsection{Example 2}
+	\begin{circuitikz}[american voltages] \draw
+	(0,0) to[R, i_<=$i_1$] (0,4)
+		  to[R, i_>=$I_y$] (4,4)
+		  to[V, v=$a_1$, invert] (8,4)	
+		  to[I, i=$4mA$] (8,0)
+	(0,0) to [short] (8,0)
+	(4,0) to[R, *-*, i=$2mA$] (4, 4)
+	
+	(0,4) to[I, i=$a_1$] (0,8) 
+		  to[short] (8,8)
+		  to[R, i=$I_x$] (8,4)
+	(4,8) to[R, *-*, i=$3mA$] (4, 4)
+
+	%(0.5,0) -- (0.5, -2)
+	%	   to[voltmeter, l=3<\kilo\volt>, color=blue] (3.5,-2) -- (3.5,0)
+ 	;
+ 	\end{circuitikz}
+
+
 
 \end{itemize}
 
@@ -322,10 +340,6 @@ to[short](0,0)
 \end{circuitikz}
 \newline
 The figure above shows a short circuit. As Ohm's Law states V = RI, since there is no resistance in the circuit, the voltage of the wire is zero.
-
-
-
-
 
 
 
