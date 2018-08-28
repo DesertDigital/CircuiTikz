@@ -1,4 +1,4 @@
-%
+ 	%
 % This is a borrowed LaTeX template file for lecture notes for CS267,
 % Applications of Parallel Computing, UCBerkeley EECS Department.
 % Now being used for CMU's 10725 Fall 2012 Optimization course
@@ -140,9 +140,6 @@
 \end{center}
 \end{figure}
 
-
-
-
 \newpage
 \section{Elements in a Circuit}
 In order to build a circuit we need a bunch of elements.
@@ -223,24 +220,38 @@ Elements in a circuit are either Passive or Active
 	\hspace{3cm}Then $\Sigma I = 0$
 	\newline
 	\includegraphics[scale=0.75]{currentlaw}
+
+	
+
+
+
+
 	\item Kirchoff Voltage Law: Within any closed loop of a circuit, the sum of all the voltages in any closed loop is always zero with the following rule:
 	\begin{itemize}
 	\item Voltage encounters $+$ $\rightarrow$ $(+) $
 	\item Voltage encounters $-$ $\rightarrow$ $(-) $
 	\end{itemize}
 	\hspace{3cm}Then $\Sigma V = 0$
-	%\newline
 	
-	\includegraphics[scale=0.70]{voltagelaw}
+	\begin{circuitikz} \draw
+	(0,0) to[short] (0,3)
+	to[generic, l=$V_1$](2,3)
+	to[generic, l=$V_2$](4,3)
+	to[generic, l=$V_3$](6,3)
+	to[short](6,0)
+	(0,0) to[battery, l=V] (6,0)
+	;
+	\end{circuitikz}
+	\newline
+	V = $V_1 + V_2 + V_3$
 
 	\subsection{Example 1}
 	\begin{circuitikz} \draw
 	(0,0) to[american voltage source, l=36 <\volt>, invert] (0,4)
-		  to [short, i=$$] (1,4) 
+		  to [short, i=$ $] (1,4) 
 		  to[generic, l=$+ 12V -$] (4,4)
 		  to[generic, l=$+ 8V -$] (8,4)	
 		  to[generic, l=$+ 16V -$] (8,0)
-		  
 	(0,0) to [short] (8,0)
 	(4,0) to[american controlled voltage source, *-*, l=24<\volt>, i=$I_x$] (4, 4)
 		 
@@ -262,6 +273,59 @@ Elements in a circuit are either Passive or Active
 \item $P_{2I} = 24*2I_{x} = 48I_{x} (absorbing)$
 
 \end{itemize}
+
+\subsection{Example 3}
+\begin{circuitikz} \draw
+	(0,0) to[american voltage source, l=5 <\volt>, invert] (0,4)
+		  to[short, i=$5 mA$] (4,4) 
+	(4,0) to[R, l_=5<\kilo\Omega>] (4, 4)
+	(0,0) to[short](4,0)
+	%(0.5,0) -- (0.5, -2)
+	%	   to[voltmeter, l=3<\kilo\volt>, color=blue] (3.5,-2) -- (3.5,0)
+ 	;
+\end{circuitikz}
+\begin{itemize}
+	\item $V = RI$
+	\item $V = 5k\Omega * 5mA$
+	\item $V = 5k\Omega * 5mA$
+	\item $V = 5000\Omega * 0.005mA$
+	\item $V = 25V$
+\end{itemize}
+
+\subsection{Open Circuit}
+\begin{circuitikz} \draw
+	
+		  
+	(4,0) to[R, l_=5<\kilo\Omega>] (4, 4)
+	(0,0) to[short, *-](4,0)
+	(0,4) to[short, *-](4,4)
+	%(0.5,0) -- (0.5, -2)
+	%	   to[voltmeter, l=3<\kilo\volt>, color=blue] (3.5,-2) -- (3.5,0)
+ 	;
+\end{circuitikz}
+\newline
+The figure above shows an open circuit (O.C.). 
+An open circuit is a circuit which has no current flowing through it.
+Circuits with large resitances can also become open circuits. 
+\begin{itemize}
+\item $I = \frac{V}{R}$
+\item $\frac{V}{\infty} = 0$
+\end{itemize}
+
+\subsection{Short Circuit}
+\begin{circuitikz} \draw
+(0,0) to[short] (0,4)
+to[short](4,4)
+to[battery](4,0)
+to[short](0,0)	
+;
+\end{circuitikz}
+\newline
+The figure above shows a short circuit. As Ohm's Law states V = RI, since there is no resistance in the circuit, the voltage of the wire is zero.
+
+
+
+
 
 
 

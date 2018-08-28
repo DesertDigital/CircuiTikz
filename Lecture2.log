@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.8.18)  28 AUG 2018 01:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.8.18)  28 AUG 2018 02:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -854,51 +854,48 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 File: dependentsources.PNG Graphic file (type png)
 
 <use dependentsources.PNG>
-Package pdftex.def Info: dependentsources.PNG used on input line 173.
+Package pdftex.def Info: dependentsources.PNG used on input line 170.
 (pdftex.def)             Requested size: 351.31009pt x 203.75984pt.
  [2 <./dependentsources.PNG>]
 <ohm.jpeg, id=25, 282.05376pt x 180.675pt>
 File: ohm.jpeg Graphic file (type jpg)
  <use ohm.jpeg>
-Package pdftex.def Info: ohm.jpeg used on input line 184.
+Package pdftex.def Info: ohm.jpeg used on input line 181.
 (pdftex.def)             Requested size: 211.53978pt x 135.5059pt.
  [3 <./ohm.jpeg>]
 <currentlaw.png, id=30, 472.76625pt x 216.05719pt>
 File: currentlaw.png Graphic file (type png)
  <use currentlaw.png>
-Package pdftex.def Info: currentlaw.png used on input line 225.
+Package pdftex.def Info: currentlaw.png used on input line 222.
 (pdftex.def)             Requested size: 354.5738pt x 162.04248pt.
 
-<voltagelaw.jpg, id=31, 312.41719pt x 242.40562pt>
-File: voltagelaw.jpg Graphic file (type jpg)
- <use voltagelaw.jpg>
-Package pdftex.def Info: voltagelaw.jpg used on input line 234.
-(pdftex.def)             Requested size: 218.69052pt x 169.68277pt.
+Underfull \vbox (badness 3058) has occurred while \output is active []
 
-[4 <./currentlaw.png> <./voltagelaw.jpg>] [5] (./Lecture2.aux) ) 
+ [4 <./currentlaw.png>] [5] [6] (./Lecture2.aux) ) 
 Here is how much of TeX's memory you used:
- 28960 strings out of 494945
- 673580 string characters out of 6181032
- 737326 words of memory out of 5000000
- 31917 multiletter control sequences out of 15000+600000
+ 29273 strings out of 494945
+ 681348 string characters out of 6181032
+ 750610 words of memory out of 5000000
+ 32231 multiletter control sequences out of 15000+600000
  8965 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  62i,9n,56p,10363b,1506s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Lecture2.pdf (5 pages, 223781 bytes).
+</usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Lecture2.pdf (6 pages, 225296 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
