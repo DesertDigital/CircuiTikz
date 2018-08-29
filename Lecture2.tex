@@ -256,28 +256,6 @@ Elements in a circuit are either Passive or Active
 	%	   to[voltmeter, l=3<\kilo\volt>, color=blue] (3.5,-2) -- (3.5,0)
  	;
  	\end{circuitikz}
-
- 	\subsection{Example 2}
-	\begin{circuitikz}[american voltages] \draw
-	(0,0) to[R, i_<=$i_1$] (0,4)
-		  to[R, i_>=$I_y$] (4,4)
-		  to[V, v=$a_1$, invert] (8,4)	
-		  to[I, i=$4mA$] (8,0)
-	(0,0) to [short] (8,0)
-	(4,0) to[R, *-*, i=$2mA$] (4, 4)
-	
-	(0,4) to[I, i=$a_1$] (0,8) 
-		  to[short] (8,8)
-		  to[R, i=$I_x$] (8,4)
-	(4,8) to[R, *-*, i=$3mA$] (4, 4)
-
-	%(0.5,0) -- (0.5, -2)
-	%	   to[voltmeter, l=3<\kilo\volt>, color=blue] (3.5,-2) -- (3.5,0)
- 	;
- 	\end{circuitikz}
-
-
-
 \end{itemize}
 
 \begin{itemize}
@@ -292,6 +270,44 @@ Elements in a circuit are either Passive or Active
 
 \end{itemize}
 
+ 	\subsection{Example 2}
+	\begin{circuitikz}[american voltages] \draw
+	(0,0) to[R, i_<=$I_2$] (0,4)
+	(0,4) to[short, -*, l=$3$](0,4)
+		  to[R, i_>=$I_y$] (4,4)
+		  to[V, v=$a_1$, invert] (8,4)	
+		  to[I, i=$4mA$] (8,0)
+	(0,0) to [short] (8,0)
+	(4,0) to[R, i=$2mA$] (4, 4)
+	(4,0) to[short, -*, l=2](4,0)
+
+	
+	(0,4) to[I, i=$a_1$] (0,8) 
+		  to[short, l=$1$] (8,8)
+		  to[R, i=$I_x$] (8,4)
+	(4,8) to[R, *-, i=$3mA$] (4, 4)
+ 	;
+ 	\end{circuitikz}
+
+\begin{itemize}
+	\item Node 1
+	\begin{itemize}
+		\item $I_x + 3 = 12$
+		\item $I_x = 8mA$
+	\end{itemize}
+	\item Node 2
+	\begin{itemize}
+		\item $4 + I_2 = 2A$
+		\item $I_2 = -2A$
+	\end{itemize}
+	\item Node 3
+	\begin{itemize}
+		\item $I_y + I_2 + 12 = 0$
+		\item $I_y + (-2) + 12 = 0$
+		\item $I_y = -10A$
+	\end{itemize}
+\end{itemize} 	
+
 \subsection{Example 3}
 \begin{circuitikz} \draw
 	(0,0) to[american voltage source, l=5 <\volt>, invert] (0,4)
@@ -302,6 +318,7 @@ Elements in a circuit are either Passive or Active
 	%	   to[voltmeter, l=3<\kilo\volt>, color=blue] (3.5,-2) -- (3.5,0)
  	;
 \end{circuitikz}
+
 \begin{itemize}
 	\item $V = RI$
 	\item $V = 5k\Omega * 5mA$
@@ -310,6 +327,7 @@ Elements in a circuit are either Passive or Active
 	\item $V = 25V$
 \end{itemize}
 
+\newpage
 \subsection{Open Circuit}
 \begin{circuitikz} \draw
 	
